@@ -129,7 +129,6 @@ export default defineComponent({
 
 <style scoped>
 .app {
-  /* Definição de variáveis no escopo principal para melhor compatibilidade */
   --primary-color: #3b82f6;
   --primary-hover: #2563eb;
   --success-color: #10b981;
@@ -170,7 +169,6 @@ h1 {
   gap: 2rem;
 }
 
-/* --- Resumo do Carrinho --- */
 .cart-summary {
   margin-top: 4rem;
   background: var(--bg-card);
@@ -206,7 +204,6 @@ h1 {
   margin-top: 1rem;
 }
 
-/* --- Lista de Itens --- */
 .cart-items {
   margin-top: 2.5rem;
 }
@@ -259,7 +256,6 @@ h1 {
   color: var(--text-secondary);
 }
 
-/* --- Botões --- */
 .item-actions {
   display: flex;
   gap: 0.5rem;
