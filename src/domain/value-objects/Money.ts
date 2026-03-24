@@ -1,5 +1,5 @@
 export class Money {
-  private constructor(private readonly value: number) {}
+  constructor(public readonly value: number) {}
 
   static create(value: number): Money {
     if (value < 0) throw new Error("Invalid price");

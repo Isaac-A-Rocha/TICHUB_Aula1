@@ -31,6 +31,30 @@ export class Cart {
     return new Cart(newItems);
   }
 
+  removeItem(productId: number, quantity: number = 1): Cart {
+    const newItems = new Map(this.items);
+    const existing = newItems.get(productId);
+
+    if (existing) {
+      if (existing.quantity > quantity) {
+        newItems.set(productId, {
+          product: existing.product,
+          quantity: existing.quantity - quantity,
+        });
+      } else {
+        newItems.delete(productId);
+      }
+    }
+
+    return new Cart(newItems);
+  }
+
+  removeAll(productId: number): Cart {
+    const newItems = new Map(this.items);
+    newItems.delete(productId);
+    return new Cart(newItems);
+  }
+
   getTotalItems(): number {
     return Array.from(this.items.values())
       .reduce((acc, item) => acc + item.quantity, 0);
